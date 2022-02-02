@@ -1,0 +1,11 @@
+<div class="form">
+    <%= form_for(task) do |f| %>
+    <div><%= f.label :Title %></div>
+    <div><%= f.text_field :title %></div>
+    <div><%= f.label :Details %></div>
+    <div><%= f.text_field :details %></div>
+    <div><%= f.label :Completed %></div>
+    <div><%= f.check_box :completed, {}, true, false %></div>
+    <br>
+    <div><%= f.submit "#{task.new_record? ? "Create" : "Edit"}" %></div>
+  <% end %>
